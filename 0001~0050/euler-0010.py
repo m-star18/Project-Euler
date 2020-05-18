@@ -10,7 +10,4 @@ def makePrimeChecker(n):
 
 
 limit = 2 * 10 ** 6
-ans = 0
-for i, v in enumerate(makePrimeChecker(limit)):
-    ans += i if v else 0
-print(ans)
+print(sum(i if v else 0 for i, v in enumerate(makePrimeChecker(limit))))
